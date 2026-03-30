@@ -34,6 +34,11 @@ if errorlevel 1 (
 echo 套件安裝完成 OK
 
 echo.
+echo [2.5/3] 確保 moviepy 版本相容...
+pip install "moviepy==1.0.3" --force-reinstall
+echo moviepy 1.0.3 安裝完成 OK
+
+echo.
 echo [3/3] 檢查 FFmpeg...
 ffmpeg -version >nul 2>&1
 if errorlevel 1 (
