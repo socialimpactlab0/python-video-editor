@@ -5,15 +5,28 @@ from __future__ import annotations
 import os
 from typing import List, Optional, Tuple
 
-from moviepy.editor import (
-    AudioFileClip,
-    ColorClip,
-    CompositeAudioClip,
-    CompositeVideoClip,
-    TextClip,
-    VideoFileClip,
-    concatenate_videoclips,
-)
+try:
+    # moviepy 1.x
+    from moviepy.editor import (
+        AudioFileClip,
+        ColorClip,
+        CompositeAudioClip,
+        CompositeVideoClip,
+        TextClip,
+        VideoFileClip,
+        concatenate_videoclips,
+    )
+except ImportError:
+    # moviepy 2.x
+    from moviepy import (
+        AudioFileClip,
+        ColorClip,
+        CompositeAudioClip,
+        CompositeVideoClip,
+        TextClip,
+        VideoFileClip,
+        concatenate_videoclips,
+    )
 
 
 # ---------------------------------------------------------------------------
